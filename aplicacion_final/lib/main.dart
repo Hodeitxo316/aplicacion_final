@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:aplicacion_final/core/audio/app_audio_handler.dart';
 import 'package:aplicacion_final/features/player/presentation/providers/audio_player_provider.dart';
+import 'package:aplicacion_final/features/player/presentation/views/home_screen.dart';
 
 late AppAudioHandler _audioHandler;
 
@@ -42,14 +43,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF121212),
         primaryColor: const Color(0xFF1DB954),
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Motor de Audio Inicializado',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
-        ),
-      ),
+      home: const HomeScreen(),
     );
   }
 }
